@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:showAsAction="always"
+        android:title="@string/edit">
+        <menu>
+            <item
+                android:id="@+id/menu_add"
+                android:showAsAction="always"
+                android:title="@string/add"/>
+            <item
+                android:id="@+id/menu_del"
+                android:showAsAction="always"
+                android:title="@string/delete"/>
+            <item
+                android:id="@+id/menu_share"
+                android:showAsAction="always"
+                android:title="@string/share"/>
+        </menu>
+    </item>
+    <item
+        android:showAsAction="always"
+        android:title="@string/file">
+        <menu>
+            <item
+                android:id="@+id/menu_load"
+                android:showAsAction="always"
+                android:title="@string/load"/>
+            <item
+                android:id="@+id/menu_save"
+                android:showAsAction="always"
+                android:title="@string/save"/>
+            <item
+                android:id="@+id/menu_config"
+                android:showAsAction="always"
+                android:title="@string/preferences"/>
+        </menu>
+    </item>
+
+</menu>
