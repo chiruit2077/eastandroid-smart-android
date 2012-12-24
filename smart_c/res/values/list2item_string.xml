@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="file">FILE</string>
+    <string name="load">LOAD</string>
+    <string name="save">SAVE</string>
+    <string name="preferences">Preferences</string>
+    <string name="edit">EDIT</string>
+    <string name="add">ADD</string>
+    <string name="delete">DEL</string>
+    <string name="share">SHARE</string>
+
+</resources>
