@@ -14,6 +14,7 @@ public class BaseP {
 	private static final String DEFVALUE_STRING = "";
 	private static final int DEFVALUE_INT = -1;
 	private static final long DEFVALUE_LONG = -1L;
+	private static final boolean DEFVALUE_BOOLEAN = false;
 	public static BaseP INSTANCE = new BaseP();
 
 	public static BaseP c() {
@@ -82,12 +83,24 @@ public class BaseP {
 		return mPreferences.getString(key, DEFVALUE_STRING);
 	}
 
+	public boolean getBoolean(String key) {
+		return mPreferences.getBoolean(key, DEFVALUE_BOOLEAN);
+	}
+
+	public long getLong(String key, long defValue) {
+		return mPreferences.getLong(key, defValue);
+	}
+
+	public int getInt(String key, int defValue) {
+		return mPreferences.getInt(key, defValue);
+	}
+
 	public String getString(String key, String defValue) {
 		return mPreferences.getString(key, defValue);
 	}
 
-	public boolean getBoolean(String key) {
-		return mPreferences.getBoolean(key, false);
+	public boolean getBoolean(String key, boolean defValue) {
+		return mPreferences.getBoolean(key, defValue);
 	}
 
 }
