@@ -57,7 +57,7 @@ public final class Exec {
 		android.os.Process.killProcess(android.os.Process.myPid());
 	}
 	public static boolean isALWAYS_FINISH_ACTIVITIES(Context context, OnClickListener positiveListener, OnClickListener negativeListener) {
-		int ALWAYS_FINISH_ACTIVITIES = android.provider.Settings.System.getInt(context.getContentResolver(), android.provider.Settings.System.ALWAYS_FINISH_ACTIVITIES, 0);
+		int ALWAYS_FINISH_ACTIVITIES = android.provider.Settings.System.getInt(context.getContentResolver(), android.provider.Settings.Global.ALWAYS_FINISH_ACTIVITIES, 0);
 		if (ALWAYS_FINISH_ACTIVITIES != 1)
 			return true;
 		String message = "원만한 어플 실행을 위하여 환경설정에서 \"활동 보관 안 함\" 체크를 해제하여 주시기 바랍니다.";

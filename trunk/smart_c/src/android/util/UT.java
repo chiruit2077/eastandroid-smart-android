@@ -355,8 +355,6 @@ public final class UT {
 			} catch (IOException e) {
 			}
 		}
-		if (E.NETLOG)
-			Log.l(sb.toString());
 
 		return sb.toString();
 	}

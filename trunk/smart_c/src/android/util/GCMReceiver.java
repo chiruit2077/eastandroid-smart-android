@@ -5,6 +5,7 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.miscellaneous.E;
 import android.miscellaneous.Log;
 
 /**
@@ -55,7 +56,8 @@ public class GCMReceiver extends BroadcastReceiver {
 	}
 
 	public static void register(Context context, String project_id) {
-		Log.l();
+		if (E.NETLOG)
+			Log.l(context, project_id);
 		Intent service = new Intent(GCMConstants.INTENT_TO_GCM_REGISTRATION);
 		service.putExtra(GCMConstants.EXTRA_APPLICATION_PENDING_INTENT, PendingIntent.getBroadcast(context, 0, new Intent(), 0));
 		service.putExtra(GCMConstants.EXTRA_SENDER, project_id);
@@ -63,7 +65,8 @@ public class GCMReceiver extends BroadcastReceiver {
 	}
 
 	public static void unregister(Context context) {
-		Log.l();
+		if (E.NETLOG)
+			Log.l(context);
 		Intent service = new Intent(GCMConstants.INTENT_TO_GCM_UNREGISTRATION);
 		service.putExtra(GCMConstants.EXTRA_APPLICATION_PENDING_INTENT, PendingIntent.getBroadcast(context, 0, new Intent(), 0));
 		context.startService(service);
@@ -71,7 +74,8 @@ public class GCMReceiver extends BroadcastReceiver {
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		Log.l("OnReceive:", intent);
+		if (E.NETLOG)
+			Log.l(intent);
 		GCMIntentService.wakeLockStartService(context, intent);
 		setResult(Activity.RESULT_OK, null, null);
 	}

@@ -44,12 +44,12 @@ public class GCMIntentService extends IntentService {
 		intent.setPackage(context.getPackageName());
 		intent.addCategory(context.getPackageName());
 		context.startService(intent);
-		Log.l("startService : " + intent);
+//		Log.l("startService : " + intent);
 	}
 
 	@Override
 	public final void onHandleIntent(Intent intent) {
-		Log.l(intent);
+//		Log.l(intent);
 		mContext = this;
 		try {
 			String action = intent.getAction();
@@ -92,14 +92,14 @@ public class GCMIntentService extends IntentService {
 		}
 	}
 	protected void onUnregistration() {
-		Log.l();
+//		Log.l();
 	}
 
 	protected void onRegistrationId(String registrationId) {
-		Log.l("registrationId:" + registrationId);
+//		Log.l("registrationId:" + registrationId);
 	}
 
 	protected void onMessage(Intent intent) {
-		Log.l(intent);
+//		Log.l(intent);
 	}
 }

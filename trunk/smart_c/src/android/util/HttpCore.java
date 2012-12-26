@@ -75,6 +75,8 @@ public class HttpCore {
 
 			final InputStream is = httpURLConnection.getInputStream();
 			string = UT.convertStreamToString(is);
+			if (E.NETLOG)
+				Log.l(string);
 
 			is.close();
 			os.close();

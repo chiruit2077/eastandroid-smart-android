@@ -20,10 +20,9 @@ public class Log {
 	private static String locator = new String();
 	private static boolean l2t = false;
 	private static String PREFIX = ">>";
-	public static boolean release = !E.LOG;
 
 	public static void l2(Object... args) {
-		if (release)
+		if (!E.LOG)
 			return;
 		Exception e = new Exception();
 		getString2(e);
@@ -33,7 +32,7 @@ public class Log {
 	}
 
 	public static void ln(int n, Object... args) {
-		if (release)
+		if (!E.LOG)
 			return;
 		Exception e = new Exception();
 		getStringN(n, e);
@@ -43,7 +42,7 @@ public class Log {
 	}
 
 	public static void e(Object... args) {
-		if (release)
+		if (!E.LOG)
 			return;
 		Exception e = new Exception();
 		getString(e);
@@ -52,7 +51,7 @@ public class Log {
 	}
 
 	public static void w(Object... args) {
-		if (release)
+		if (!E.LOG)
 			return;
 		Exception e = new Exception();
 		getString(e);
@@ -61,7 +60,7 @@ public class Log {
 	}
 
 	public static void l() {
-		if (release)
+		if (!E.LOG)
 			return;
 		Exception e = new Exception();
 		getString(e);
@@ -69,7 +68,7 @@ public class Log {
 	}
 
 	public static void l(Object... args) {
-		if (release)
+		if (!E.LOG)
 			return;
 		Exception e = new Exception();
 		getString(e);
@@ -77,7 +76,7 @@ public class Log {
 	}
 
 	public static void c(Object... args) {
-		if (release)
+		if (!E.LOG)
 			return;
 		Exception e = new Exception();
 		getString(e);
@@ -86,7 +85,7 @@ public class Log {
 	}
 
 	public static void d(Object... args) {
-		if (release)
+		if (!E.LOG)
 			return;
 		Exception e = new Exception();
 		getString(e);
@@ -94,7 +93,7 @@ public class Log {
 	}
 
 	public static void v(Object... args) {
-		if (release)
+		if (!E.LOG)
 			return;
 		Exception e = new Exception();
 		getString(e);
@@ -102,7 +101,7 @@ public class Log {
 	}
 
 	public static void i(Object... args) {
-		if (release)
+		if (!E.LOG)
 			return;
 		Exception e = new Exception();
 		getString(e);

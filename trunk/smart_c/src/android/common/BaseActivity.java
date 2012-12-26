@@ -26,6 +26,7 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.miscellaneous.E;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextWatcher;
@@ -69,8 +70,9 @@ public class BaseActivity extends ActivityGroup {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		mContext = BaseActivity.this;
+		if (E.SCREEN)
+			keepScreenOn();
 	}
-
 	@Override
 	protected void onStop() {
 		super.onStop();
@@ -123,11 +125,11 @@ public class BaseActivity extends ActivityGroup {
 			mManagedTagView.add(findViewById(resid));
 		}
 	}
-	public void KeepScreenOn() {
+	public void keepScreenOn() {
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 	}
 
-	public void KeepScreenOff() {
+	public void keepScreenOff() {
 		getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 	}
 
