@@ -41,10 +41,10 @@ public class GCMIntentService extends IntentService {
 
 		sWakeLock.acquire();
 		intent.setComponent(null);
-		intent.setPackage(null);
+		intent.setPackage(context.getPackageName());
 		intent.addCategory(context.getPackageName());
 		context.startService(intent);
-//		Log.l("startService : " + intent);
+		Log.l("startService : " + intent);
 	}
 
 	@Override
